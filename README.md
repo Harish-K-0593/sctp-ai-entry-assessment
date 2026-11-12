@@ -22,9 +22,9 @@ All solutions are written in **Python 3**.
 - Results are rounded to 2 decimal places with `round()` to avoid floating-point errors (e.g. `98.60000000000001` → `98.6`).
 
 ### Question 2 – Arrays & Loops
-- [What the function does, in one line]
-- [Which loop you used, and why]
-- [Any edge case you handled, e.g. an empty list]
+- `inventory` is a list that stores item names as strings.
+- `addItem(itemName)` uses the `in` operator to check for duplicates before adding with `.append()`; a duplicate prints a warning instead of being added.
+- `listInventory()` uses `if not inventory` to detect an empty list (an empty list is treated as `False` in Python), otherwise it prints all items.
 
 ### Question 3 – String Manipulation
 - `formatName(firstName, lastName)` returns `"Lastname, Firstname"` with proper capitalisation.
