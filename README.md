@@ -2,3 +2,42 @@
 NTU SCTP AIE Technical Entry Assessment Question Answers
 ## Brief
 This repository contains the answers to all the 3 questions in the technical entry assessment (link: https://github.com/su-ntu-sctp/sctp-aie-technical-entry-test)
+
+## Repository Structure
+
+| Question | Topic | File |
+|---|---|---|
+| Question 1 | Functions & Conditionals | `src/q1_python.py` |
+| Question 2 | Arrays & Loops | `src/q2_python.py` |
+| Question 3 | String Manipulation | `src/q3_python.py` |
+
+All solutions are written in **Python 3**.
+
+## Solution Overview
+
+### Question 1 – Temperature Converter
+- `convertTemp(value, unit)` converts between Celsius and Fahrenheit.
+- Uses `if / elif / else` to choose the conversion based on the unit.
+- **The unit is checked before any calculation**, so an invalid unit (e.g. `"X"`) returns `-1` without the function trying to do maths on invalid input.
+- Results are rounded to 2 decimal places with `round()` to avoid floating-point errors (e.g. `98.60000000000001` → `98.6`).
+
+### Question 2 – Arrays & Loops
+- [What the function does, in one line]
+- [Which loop you used, and why]
+- [Any edge case you handled, e.g. an empty list]
+
+### Question 3 – String Manipulation
+- `formatName(firstName, lastName)` returns `"Lastname, Firstname"` with proper capitalisation.
+- `formatInitials(firstName, lastName)` returns uppercase initials in the format `"X.Y."`.
+- `.strip()` removes accidental spaces; `.capitalize()` handles any input case (`"aLiCe"` → `"Alice"`).
+- Includes `assert` tests for mixed-case input.
+
+## Design Notes
+
+- Kept to the brief: e.g. a lowercase `"c"` returns `-1` in Q1 because the specification only accepts `"C"` or `"F"`.
+- Known limitations (outside the brief's scope): non-numeric values with a valid unit in Q1, and empty strings in Q3, are not validated.
+- Test calls sit under `if __name__ == "__main__":` so the functions can be imported without running the tests.
+
+## AI Use Disclosure
+
+AI tools were used for guidance and code review. All code has been written, tested and understood by me, and I am able to walk through any part of it.
