@@ -18,7 +18,7 @@ All solutions are written in **Python 3**.
 ### Question 1 – Temperature Converter
 - `convertTemp(value, unit)` converts between Celsius and Fahrenheit.
 - Uses `if / elif / else` to choose the conversion based on the unit.
-- **The unit is checked before any calculation**, so an invalid unit (e.g. `"X"`) returns `-1` without the function trying to do maths on invalid input.
+- **The unit parameter is checked before any calculation**, so an invalid unit (e.g. `"X"`) returns `-1` without the function trying to do maths on invalid input.
 - Results are rounded to 2 decimal places with `round()` to avoid floating-point errors (e.g. `98.60000000000001` → `98.6`).
 
 ### Question 2 – Arrays & Loops
@@ -29,14 +29,11 @@ All solutions are written in **Python 3**.
 ### Question 3 – String Manipulation
 - `formatName(firstName, lastName)` returns `"Lastname, Firstname"` with proper capitalisation.
 - `formatInitials(firstName, lastName)` returns uppercase initials in the format `"X.Y."`.
-- `.strip()` removes accidental spaces; `.capitalize()` handles any input case (`"aLiCe"` → `"Alice"`).
-- Includes `assert` tests for mixed-case input.
+- `.capitalize()` handles any input case (`"aLiCe"` → `"Alice"`).
 
 ## Design Notes
-
 - Kept to the brief: e.g. a lowercase `"c"` returns `-1` in Q1 because the specification only accepts `"C"` or `"F"`.
 - Known limitations (outside the brief's scope): non-numeric values with a valid unit in Q1, and empty strings in Q3, are not validated.
-- Test calls sit under `if __name__ == "__main__":` so the functions can be imported without running the tests.
 
 ## AI Use Disclosure
 
